@@ -3,6 +3,16 @@
 @section('title', 'Main')
 
 @section('content')
+
+    <section id="all_people_block">
+        <div>
+            <div>
+                <h1>We can do everything!</h1>
+                <p>We will get your troubles</p>
+            </div>
+        </div>
+    </section>
+
     <section class="hero">
         <div class="container">
             <h1>Ласкаво просимо до ServicePro</h1>
