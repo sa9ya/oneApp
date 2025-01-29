@@ -3,7 +3,7 @@
 @section('title', 'Main')
 
 @section('content')
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto p-4">
         <section id="all_people_block">
             <div class="columns-2">
                 <p>Что ж, позволь мне кое-что тебе сказать, ...</p>
