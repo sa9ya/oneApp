@@ -9,24 +9,42 @@
     </head>
     <body>
         <header class="bg-gray-800 text-white shadow">
-            <div class="container mx-auto flex justify-between items-center p-4">
-                <a href="#" class="text-xl font-bold hover:text-gray-300">
-                    <img src="logo.png" alt="Logo" class="h-8 inline-block">
+            <div class="container mx-auto flex justify-between items-center py-4 px-6">
+
+                <a href="#" class="text-xl font-bold flex items-center">
+                    <img src="logo.png" alt="Logo" class="h-10 mr-2">
+                    <span>Brand</span>
                 </a>
 
-                <nav class="hidden md:flex space-x-6">
+                <nav class="hidden md:flex items-center space-x-6">
                     <a href="#" class="hover:text-gray-300">Home</a>
                     <a href="#" class="hover:text-gray-300">About</a>
                     <a href="#" class="hover:text-gray-300">Services</a>
                     <a href="#" class="hover:text-gray-300">Contact</a>
+
+                    <div class="flex space-x-4">
+                        <a href="" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-700">Request service</a>
+                        <a href="/form" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500">Be a worker</a>
+                    </div>
                 </nav>
 
-                <button class="block md:hidden text-gray-400 hover:text-white">
+                <button id="menu-toggle" class="block md:hidden text-gray-400 hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
             </div>
+
+            <nav id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white py-4">
+                <div class="container mx-auto flex flex-col items-center space-y-4">
+                    <a href="#" class="hover:text-gray-300">Home</a>
+                    <a href="#" class="hover:text-gray-300">About</a>
+                    <a href="#" class="hover:text-gray-300">Services</a>
+                    <a href="#" class="hover:text-gray-300">Contact</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-700">Login</a>
+                    <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500">Sign Up</a>
+                </div>
+            </nav>
         </header>
 
         <main class="pt-12 pb-12">
@@ -42,8 +60,7 @@
                     </a>
 
                     <nav class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="hover:text-gray-400">Home</a>
-                        <a href="#" class="hover:text-gray-400">About</a>
+                        <a href="/" class="hover:text-gray-400">Home</a>
                         <a href="#" class="hover:text-gray-400">Services</a>
                         <a href="#" class="hover:text-gray-400">Contact</a>
                     </nav>
