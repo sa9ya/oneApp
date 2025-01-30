@@ -8,16 +8,16 @@
         @vite(['resources/css/app.scss', 'resources/js/app.js'])
     </head>
     <body>
-        <header class="bg-gray-800 text-white shadow">
+        <header class="fixed z-50 top-0 left-0 w-full bg-gray-800 text-white shadow">
             <div class="container mx-auto flex justify-between items-center py-4 px-6">
 
-                <a href="#" class="text-xl font-bold flex items-center">
-                    <img src="logo.png" alt="Logo" class="h-10 mr-2">
-                    <span>Brand</span>
+                <a href="/" class="text-xl font-bold flex items-center">
+                    <img src="/images/logo.png" alt="Logo" class="h-10 mr-2">
+                    <span>OneApp</span>
                 </a>
 
                 <nav class="hidden md:flex items-center space-x-6">
-                    <a href="#" class="hover:text-gray-300">Home</a>
+                    <a href="/" class="hover:text-gray-300">Home</a>
                     <a href="#" class="hover:text-gray-300">About</a>
                     <a href="#" class="hover:text-gray-300">Services</a>
                     <a href="#" class="hover:text-gray-300">Contact</a>
@@ -47,7 +47,7 @@
             </nav>
         </header>
 
-        <main class="pt-12 pb-12">
+        <main class="mt-[74px]">
             @yield('content')
         </main>
 
