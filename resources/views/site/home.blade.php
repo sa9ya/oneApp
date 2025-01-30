@@ -10,14 +10,14 @@
 
         <!-- Контент -->
         <div class="relative mt-auto py-6 px-4 flex flex-col items-center shadow-lg">
-            <h2 class="text-6xl text-white font-semibold text-gray-900 mb-4">
+            <h2 class="text-6xl text-white font-semibold text-gray-900 mb-8">
                 Welcome to OneApp
             </h2>
             <div class="flex w-[500px]">
-                <button class="flex-1 text-4xl px-6 py-2 bg-blue-500 text-white font-semibold rounded-l-full shadow-md hover:bg-blue-600">
+                <button class="flex-1 text-4xl px-6 py-4 bg-blue-500 text-white font-semibold rounded-l-full shadow-md hover:bg-blue-600">
                     Customer
                 </button>
-                <button class="flex-1 text-4xl px-6 py-2 bg-gray-300 text-gray-700 font-semibold rounded-r-full shadow-md hover:bg-gray-400">
+                <button class="flex-1 text-4xl px-6 py-4 bg-gray-300 text-gray-700 font-semibold rounded-r-full shadow-md hover:bg-gray-400">
                     Worker
                 </button>
             </div>
