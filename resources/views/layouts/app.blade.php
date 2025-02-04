@@ -18,9 +18,9 @@
 
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="/" class="hover:text-gray-300">Home</a>
-                    <a href="#" class="hover:text-gray-300">About</a>
+                    <a href="/about" class="hover:text-gray-300">About</a>
                     <a href="#" class="hover:text-gray-300">Services</a>
-                    <a href="#" class="hover:text-gray-300">Contact</a>
+                    <a href="/contacts" class="hover:text-gray-300">Contact</a>
 
                     <div class="flex space-x-4">
                         <a href="" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-700">Request service</a>

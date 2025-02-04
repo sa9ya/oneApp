@@ -7,6 +7,7 @@ use App\Http\Controllers\ApplyController;
 
 Route::get('/', [SiteController::class, 'home'])->name('home');
 Route::get('/contacts', [SiteController::class, 'contacts'])->name('contacts');
+Route::get('/about', [SiteController::class, 'about'])->name('about');
 Route::get('/counter', Counter::class);
 
 Route::get('/form', [ApplyController::class, 'index'])->name('apply.show');
