@@ -14,7 +14,7 @@
             specialists benefit from efficient, transparent collaboration.
         </p>
 
-        <h2>Our Mission</h2>
+        <h2 class="text-center">Our Mission</h2>
 
         <p>
             We strive to provide fast, effective solutions for those in need while offering specialists the optimal
@@ -23,7 +23,7 @@
             as it is efficient.
         </p>
 
-        <h2>What We Offer</h2>
+        <h2 class="text-center">What We Offer</h2>
 
         <ul>
             <li>
@@ -49,7 +49,7 @@
             </li>
         </ul>
 
-        <h2>Our Vision for the Future</h2>
+        <h2 class="text-center">Our Vision for the Future</h2>
 
         <p>
             We envision a world where everyone can effortlessly access the best specialists and solutions without
@@ -58,12 +58,14 @@
             improve our service, expand opportunities, and enhance the way platform participants interact.
         </p>
 
-        <h2>Join Us</h2>
+        <h2 class="text-center">Join Us</h2>
 
         <p>
             Together, we can shape a future where technology and collaboration create a more productive and
             comfortable world for everyone. Join us today in building that future.
         </p>
     </section>
+
+    <x-join-us title="Be a part of our Team!"/>
 
 @endsection
