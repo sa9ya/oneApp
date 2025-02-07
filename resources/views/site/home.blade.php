@@ -26,10 +26,10 @@
 
     <section id="popular-services" class="container px-10">
         <div class="flex bg-white rounded-lg shadow-lg p-6 md:p-10 my-10 md:my-16 gap-6">
-            <div class="flex justify-center items-center">
+            <div class="w-1/4">
                 <img class="w-100 h-auto rounded-lg" src="/images/decentralization.webp" alt="Futuristic Digital Network">
             </div>
-            <div class="">
+            <div class="w-3/4">
                 <div class="text-3xl font-bold text-gray-800 mb-4">Who We Are?</div>
                 <p class="text-gray-600 text-lg leading-relaxed">
                     Alternative Vision Technologies LLC is an innovative company that creates a decentralized
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="flex bg-white rounded-lg shadow-lg p-6 md:p-10 my-10 md:my-16 gap-6">
-            <div>
+            <div class="w-3/4">
                 <div class="text-3xl font-bold text-gray-800 mb-4">Why chose us?</div>
                 <p class="text-gray-600 text-lg leading-relaxed">
                     Our platform stands out by providing a transparent, efficient, and reliable space for both
@@ -55,24 +55,29 @@
                     <li><strong>Trust-Based Community:</strong> A growing network built on transparency and reputation.</li>
                 </ul>
             </div>
-            <div class="flex justify-center items-center">
-                <img class="w-72 h-auto rounded-lg" src="/images/decentralization.webp" alt="Futuristic Digital Network">
+            <div class="w-1/4">
+                <img class="w-100 h-auto rounded-lg" src="/images/decentralization.webp" alt="Futuristic Digital Network">
             </div>
         </div>
         <div class="flex bg-white rounded-lg shadow-lg p-6 md:p-10 my-10 md:my-16 gap-6">
-            <div class="text-3xl font-bold text-gray-800 mb-4">How It Works</div>
-            <p class="text-gray-600 text-lg leading-relaxed">
-                Our platform is designed to make collaboration seamless and efficient for both clients and
-                specialists. Here’s how it works:
-            </p>
-            <ul class="list-disc text-gray-600 text-lg leading-relaxed pl-6 mt-4">
-                <li><strong>Step 1: Registration</strong> - Sign up as a client or a specialist and create your profile.</li>
-                <li><strong>Step 2: Posting or Searching</strong> - Clients post job requirements, and specialists browse available opportunities.</li>
-                <li><strong>Step 3: Matching</strong> - Our system connects clients with the best-suited specialists based on expertise and ratings.</li>
-                <li><strong>Step 4: Collaboration</strong> - Clients and specialists communicate, agree on terms, and execute tasks.</li>
-                <li><strong>Step 5: Completion & Feedback</strong> - After successful completion, both parties leave reviews, ensuring trust and quality.</li>
-                <li><strong>Step 6: Secure Payments</strong> - Specialists receive payments securely through our platform.</li>
-            </ul>
+            <div class="w-1/4">
+                <img class="w-100 h-auto rounded-lg" src="/images/decentralization.webp" alt="Futuristic Digital Network">
+            </div>
+            <div class="w-3/4">
+                <div class="text-3xl font-bold text-gray-800 mb-4">How It Works</div>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Our platform is designed to make collaboration seamless and efficient for both clients and
+                    specialists. Here’s how it works:
+                </p>
+                <ul class="list-disc text-gray-600 text-lg leading-relaxed pl-6 mt-4">
+                    <li><strong>Step 1: Registration</strong> - Sign up as a client or a specialist and create your profile.</li>
+                    <li><strong>Step 2: Posting or Searching</strong> - Clients post job requirements, and specialists browse available opportunities.</li>
+                    <li><strong>Step 3: Matching</strong> - Our system connects clients with the best-suited specialists based on expertise and ratings.</li>
+                    <li><strong>Step 4: Collaboration</strong> - Clients and specialists communicate, agree on terms, and execute tasks.</li>
+                    <li><strong>Step 5: Completion & Feedback</strong> - After successful completion, both parties leave reviews, ensuring trust and quality.</li>
+                    <li><strong>Step 6: Secure Payments</strong> - Specialists receive payments securely through our platform.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
