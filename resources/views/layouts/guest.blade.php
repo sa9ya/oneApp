@@ -17,20 +17,39 @@
                 </a>
 
                 <nav class="hidden md:flex items-center space-x-6">
-                    <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="hover:text-gray-300">{{ __('main.main') }}</a>
-                    <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="hover:text-gray-300">About</a>
-                    <a href="{{ LaravelLocalization::localizeUrl('/services') }}" class="hover:text-gray-300">Services</a>
-                    <a href="{{ LaravelLocalization::localizeUrl('/contacts') }}" class="hover:text-gray-300">Contact</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="hover:text-gray-300">{{ __('menu.home') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="hover:text-gray-300">{{ __('menu.about') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/services') }}" class="hover:text-gray-300">{{ __('menu.services') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/contacts') }}" class="hover:text-gray-300">{{ __('menu.contacts') }}</a>
 
-                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, []) }}">
-                            {{ $properties['native'] }}
-                        </a>
-                    @endforeach
+                    <div class="relative inline-block text-left">
+                        <button id="language-button" class="flex items-center px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 focus:outline-none">
+                            <span>
+                                @php
+                                    $currentLocale = LaravelLocalization::getCurrentLocale();
+                                    $locales = LaravelLocalization::getSupportedLocales();
+                                @endphp
+                                {{ $locales[$currentLocale]['native'] }}
+                            </span>
+                            <svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+
+                        <div id="language-menu" class="absolute mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg hidden">
+                            @foreach($locales as $localeCode => $properties)
+                                @if($localeCode !== $currentLocale)
+                                    <a href="{{ LaravelLocalization::getLocalizedURL($localeCode) }}" class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                        {{ $properties['native'] }}
+                                    </a>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
 
                     <div class="flex space-x-4">
-                        <a href="" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-700">Request service</a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/form') }}" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500">Be a worker</a>
+                        <a href="" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-700">{{ __('menu.request_service') }}</a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/form') }}" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500">{{ __('menu.be_a_worker') }}</a>
                     </div>
                 </nav>
 

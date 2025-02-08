@@ -10,7 +10,6 @@ class SiteController extends Controller
 {
     public function home()
     {
-		\App::setLocale('en');
 	    return view('site.home');
     }
 
