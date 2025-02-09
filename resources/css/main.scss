@@ -3,19 +3,64 @@
 @tailwind utilities;
 
 @layer base {
+
   h1 {
     @apply text-6xl font-bold text-gray-900 mb-16;
   }
+
   h2 {
     @apply text-4xl font-semibold text-gray-800 my-6;
   }
+
   h3 {
     @apply text-2xl font-medium text-gray-700 my-6;
   }
+
   p {
     @apply text-xl text-gray-600 leading-relaxed my-4;
+    color: #0c1934;
   }
+
   a {
+    @apply transition duration-[400ms] ease-in-out;
     @apply text-blue-500 hover:text-blue-600 transition-colors;
   }
+
+  button {
+    @apply transition duration-[400ms] ease-in-out;
+  }
+
+  ul {
+
+  }
+
+  li {
+    @apply my-2
+  }
+
+  .bright-btn {
+    background-color: #eee;
+  }
+
+  .bright-btn:hover {
+    background-color: #bbb;
+    @apply shadow-md;
+  }
+
+  .dark-btn {
+    background-color: #84C5F6;
+    color: #0A3A67;
+  }
+
+  .dark-btn:hover {
+    background-color: #4297E1;
+  }
+
+  //
+  //colors: {
+  //  secondary: '#80afd6',
+  //  primary: '#84C5F6',
+  //  accent: '#343e41',
+  //  muted: '#0c1934',
+  //},
 }

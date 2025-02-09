@@ -14,6 +14,9 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                textPrimary: '#0c1934',
+            },
             fontFamily: {
                 sans: ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'],
                 serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
