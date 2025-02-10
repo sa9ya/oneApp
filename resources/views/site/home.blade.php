@@ -24,36 +24,39 @@
         </div>
     </section>
 
-    <section id="popular-services" class="container py-20 px-10">
-        <div class="text-6xl text-dark text-center font-semibold text-gray-900 mb-20">Popular Services</div>
-        <div class="flex flex-wrap justify-center items-center w-full gap-8">
-            <div class="flex flex-col items-center text-center flex-1 min-w-[200px]">
-                <img src="/images/house.png" alt="" class="w-24 h-24">
-                <div class="mt-4 text-lg font-semibold">House Cleaning</div>
-                <p class="text-gray-600">Professional home cleaning services</p>
+    <section id="popular-services" class="w-full py-20 px-10 bg-gray-100">
+        <div class="container">
+            <div class="text-6xl text-dark text-center font-semibold text-gray-900 mb-20">
+                Popular Services
             </div>
 
-            <div class="flex flex-col items-center text-center flex-1 min-w-[200px]">
-                <img src="/images/accountant.png" alt="" class="w-24 h-24">
-                <div class="mt-4 text-lg font-semibold">Accountant Services</div>
-                <p class="text-gray-600">Financial and accounting expertise</p>
-            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch w-full">
+                @php
+                    $services = [
+                        ['image' => '/images/house.png', 'title' => 'House Cleaning', 'description' => 'Professional home cleaning services'],
+                        ['image' => '/images/accountant.png', 'title' => 'Accountant Services', 'description' => 'Financial and accounting expertise'],
+                        ['image' => '/images/car.png', 'title' => 'Car Cleaning', 'description' => 'High-quality vehicle cleaning services'],
+                        ['image' => '/images/lawyer.png', 'title' => 'Lawyer Services', 'description' => 'Legal assistance and consulting']
+                    ];
+                @endphp
 
-            <div class="flex flex-col items-center text-center flex-1 min-w-[200px]">
-                <img src="/images/car.png" alt="" class="w-24 h-24">
-                <div class="mt-4 text-lg font-semibold">Car Cleaning</div>
-                <p class="text-gray-600">High-quality vehicle cleaning services</p>
-            </div>
-
-            <div class="flex flex-col items-center text-center flex-1 min-w-[200px]">
-                <img src="/images/lawyer.png" alt="" class="w-24 h-24">
-                <div class="mt-4 text-lg font-semibold">Lawyer Services</div>
-                <p class="text-gray-600">Legal assistance and consulting</p>
+                @foreach ($services as $service)
+                    <div class="flex flex-col h-full bg-white shadow-lg rounded-lg transition transform hover:scale-105">
+                        <div class="p-6 text-center flex-grow flex flex-col items-center">
+                            <div class="p-4 rounded-full inline-block mb-4">
+                                <img src="{{ $service['image'] }}" alt="{{ $service['title'] }}" class="w-24 h-24">
+                            </div>
+                            <div class="text-xl font-semibold text-gray-800">{{ $service['title'] }}</div>
+                            <p class="text-gray-600 mt-2">{{ $service['description'] }}</p>
+                        </div>
+                        <a class="w-full text-center block p-6 text-white dark-btn uppercase hover:text-white" href="#">More</a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
 
-    <section id="popular-services" class="container px-10">
+    <section id="popular-services" class="container py-14 px-10">
         <div class="text-6xl text-dark text-center font-semibold text-gray-900 mb-20">About</div>
         <div class="flex bg-white rounded-lg shadow-lg p-6 md:p-10 my-10 md:my-16 gap-6">
             <div class="w-1/4">
