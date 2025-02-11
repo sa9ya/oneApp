@@ -22,4 +22,9 @@ class SiteController extends Controller
 	{
 		return view('site.contacts');
 	}
+
+	public function privacy()
+	{
+		return view('site.privacy');
+	}
 }

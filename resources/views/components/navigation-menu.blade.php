@@ -1,8 +1,8 @@
 <nav class="hidden md:flex items-center space-x-6 uppercase">
-    <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-white hover:text-gray-300">{{ __('menu.home') }}</a>
-    <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="text-white hover:text-gray-300">{{ __('menu.about') }}</a>
-    <a href="{{ LaravelLocalization::localizeUrl('/services') }}" class="text-white hover:text-gray-300">{{ __('menu.services') }}</a>
-    <a href="{{ LaravelLocalization::localizeUrl('/contacts') }}" class="text-white hover:text-gray-300">{{ __('menu.contacts') }}</a>
+    <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-white hover:text-gray-300 hover-effect">{{ __('menu.home') }}</a>
+    <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="text-white hover:text-gray-300 hover-effect">{{ __('menu.about') }}</a>
+    <a href="{{ LaravelLocalization::localizeUrl('/services') }}" class="text-white hover:text-gray-300 hover-effect">{{ __('menu.services') }}</a>
+    <a href="{{ LaravelLocalization::localizeUrl('/contacts') }}" class="text-white hover:text-gray-300 hover-effect">{{ __('menu.contacts') }}</a>
 
     <div class="relative inline-block text-left">
         <button id="language-button" class="flex items-center px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 focus:outline-none">

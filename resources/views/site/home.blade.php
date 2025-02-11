@@ -6,13 +6,14 @@
 
     <section class="py-16 relative h-[600px] flex flex-col bg-cover bg-top bg-[url('/public/images/home/all_professionals.webp')]">
         <!-- Затемнення -->
-        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-0 bg-black/70"></div>
 
         <!-- Контент -->
         <div class="relative mt-auto py-6 px-4 flex flex-col items-center shadow-lg">
-            <h2 class="text-6xl text-white font-semibold text-gray-900 mb-8">
+            <h1 class="text-center text-8xl text-white font-semibold text-gray-900 mb-2">
                 Welcome to OneApp
-            </h2>
+            </h1>
+            <p class="text-center text-4xl text-white font-semibold mb-20">One place to solve all your problems</p>
             <div class="flex w-[500px]">
                 <button class="flex-1 text-4xl rounded-l-full dark-btn py-4 px-6">
                     Customer

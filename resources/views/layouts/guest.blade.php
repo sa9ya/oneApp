@@ -8,36 +8,49 @@
         @vite(['resources/css/main.scss', 'resources/js/main.js'])
     </head>
     <body>
-        <header class="fixed z-50 top-0 left-0 w-full bg-gray-800 text-white shadow">
-            <div class="container mx-auto flex justify-between items-center py-4 px-6">
-
-                <a href="/" class="text-xl font-bold flex items-center">
-                    <img src="/images/logo.png" alt="Logo" class="h-10 mr-2">
-                    <span>OneApp</span>
-                </a>
-
-                <div class=" md:flex">
-                    <x-navigation-menu />
-
-                    <div class="flex ml-8 space-x-4">
-                        <a href="" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-700">{{ __('menu.request_service') }}</a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/form') }}" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500">{{ __('menu.be_a_worker') }}</a>
+        <header class="fixed z-50 top-0 left-0 w-full text-white shadow">
+            <div class="bg-gray-900 px-6 py-2">
+                <div class="container flex justify-between items-center">
+                    <div>
+                        <a href="" class="mr-4 text-white hover-effect">224 220 6079</a>
+                        <a href="" class="text-white hover-effect">info@oneapp.com</a>
+                    </div>
+                    <div>
+                        <a href="{{ LaravelLocalization::localizeUrl('/form') }}" class="px-2 text-white rounded-lg hover:text-blue-500">Join Us</a><!--{{ __('menu.be_a_worker') }}-->
                     </div>
                 </div>
+            </div>
+            <div class="mx-auto py-4 px-6 bg-gray-800">
+                <div class="container">
+                    <div class="flex justify-between items-center">
+                        <a href="/" class="text-xl font-bold flex items-center">
+                            <img src="/images/logo.png" alt="Logo" class="h-10 mr-2">
+                            <span>OneApp</span>
+                        </a>
 
-                <button id="menu-toggle" class="block md:hidden text-gray-400 hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
+                        <div class=" md:flex">
+                            <x-navigation-menu />
+
+                            <div class="flex ml-8 space-x-4">
+                                <a href="" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-700">{{ __('menu.request_service') }}</a>
+                            </div>
+                        </div>
+
+                        <button id="menu-toggle" class="block md:hidden text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <nav id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white py-4">
                 <div class="container mx-auto flex flex-col items-center space-y-4">
-                    <a href="#" class="hover:text-gray-300">Home</a>
-                    <a href="#" class="hover:text-gray-300">About</a>
-                    <a href="#" class="hover:text-gray-300">Services</a>
-                    <a href="#" class="hover:text-gray-300">Contact</a>
+                    <a href="#" class="hover:text-gray-300 hover-effect">Home</a>
+                    <a href="#" class="hover:text-gray-300 hover-effect">About</a>
+                    <a href="#" class="hover:text-gray-300 hover-effect">Services</a>
+                    <a href="#" class="hover:text-gray-300 hover-effect">Contact</a>
 
                     <div class="flex ml-8 space-x-4">
                         <a href="" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-700">{{ __('menu.request_service') }}</a>
@@ -47,7 +60,7 @@
             </nav>
         </header>
 
-        <main class="mt-[74px]">
+        <main class="mt-[112px]">
             @yield('content')
         </main>
 
@@ -102,7 +115,7 @@
                                 <a href="/" class="text-white hover:text-gray-400">Career</a>
                             </li>
                             <li>
-                                <a href="/" class="text-white hover:text-gray-400">PrivacyPolicy</a>
+                                <a href="{{ LaravelLocalization::localizeUrl('/privacy') }}" class="text-white hover:text-gray-400">Privacy Policy</a>
                             </li>
                             <li>
                                 <a href="/" class="text-white hover:text-gray-400">Cookie</a>

@@ -5,7 +5,7 @@
 @layer base {
 
   h1 {
-    @apply text-6xl font-bold text-gray-900 mb-16;
+    @apply text-5xl font-bold text-gray-900;
   }
 
   h2 {
@@ -13,25 +13,24 @@
   }
 
   h3 {
-    @apply text-2xl font-medium text-gray-700 my-6;
+    @apply text-3xl font-medium text-gray-700 my-6;
   }
 
   p {
-    @apply text-xl text-gray-600 leading-relaxed my-4;
-    color: #0c1934;
+    @apply text-lg leading-relaxed my-4;
   }
 
   a {
-    @apply transition duration-[400ms] ease-in-out;
     @apply text-blue-500 hover:text-blue-600 transition-colors;
   }
 
+  a,
   button {
     @apply transition duration-[400ms] ease-in-out;
   }
 
   ul {
-
+    @apply text-lg list-disc list-outside pl-6;
   }
 
   li {
@@ -63,4 +62,27 @@
   //  accent: '#343e41',
   //  muted: '#0c1934',
   //},
+  .hover-effect {
+    position: relative;
+  }
+
+  .hover-effect::before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: .4s;
+  }
+
+  .hover-effect:hover::before {
+    width: 100%;
+  }
+
+  table td,
+  table th {
+    @apply border font-semibold p-4 text-left;
+  }
 }

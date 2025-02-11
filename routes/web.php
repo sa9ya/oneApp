@@ -12,6 +12,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
 	Route::get('/', [SiteController::class, 'home'])->name('home');
 	Route::get('/about', [SiteController::class, 'about'])->name('about');
 	Route::get('/contacts', [SiteController::class, 'contacts'])->name('contacts');
+	Route::get('/privacy', [SiteController::class, 'privacy'])->name('privacy');
 	Route::get('/form', [ApplyController::class, 'index'])->name('apply.show');
 });
 
