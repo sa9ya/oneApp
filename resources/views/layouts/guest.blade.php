@@ -68,7 +68,7 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row justify-between items-top text-lg">
 
-                    <a href="/" class="text-xl font-bold">
+                    <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-xl font-bold">
                         <div class="flex items-center">
                             <img src="/images/logo.png" alt="Logo" class="h-14 mr-2">
                             <span>OneApp</span>
@@ -78,16 +78,16 @@
                     <nav class="space-x-6 mt-4 md:mt-0">
                         <ul>
                             <li>
-                                <a href="/" class="text-white hover:text-gray-400">Home</a>
+                                <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-white hover:text-gray-400">Home</a>
                             </li>
                             <li>
-                                <a href="#" class="text-white hover:text-gray-400">About</a>
+                                <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="text-white hover:text-gray-400">About</a>
                             </li>
                             <li>
                                 <a href="#" class="text-white hover:text-gray-400">Services</a>
                             </li>
                             <li>
-                                <a href="#" class="text-white hover:text-gray-400">Contact</a>
+                                <a href="{{ LaravelLocalization::localizeUrl('/contacts') }}" class="text-white hover:text-gray-400">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -95,7 +95,7 @@
                     <nav class="flex space-x-6 mt-4 md:mt-0">
                         <ul>
                             <li>
-                                <a href="/" class="text-white hover:text-gray-400">Home cleaning</a>
+                                <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-white hover:text-gray-400">Home cleaning</a>
                             </li>
                             <li>
                                 <a href="#" class="text-white hover:text-gray-400">Office cleaning</a>
@@ -112,13 +112,16 @@
                     <nav class="flex space-x-6 mt-4 md:mt-0">
                         <ul>
                             <li>
-                                <a href="/" class="text-white hover:text-gray-400">Career</a>
+                                <a href="{{ LaravelLocalization::localizeUrl('/career') }}" class="text-white hover:text-gray-400">Career</a>
                             </li>
                             <li>
                                 <a href="{{ LaravelLocalization::localizeUrl('/privacy') }}" class="text-white hover:text-gray-400">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="/" class="text-white hover:text-gray-400">Cookie</a>
+                                <a href="{{ LaravelLocalization::localizeUrl('/cookies') }}" class="text-white hover:text-gray-400">Cookies</a>
+                            </li>
+                            <li>
+                                <a href="{{ LaravelLocalization::localizeUrl('/terms-of-use') }}" class="text-white hover:text-gray-400">Terms of Use</a>
                             </li>
                         </ul>
                     </nav>

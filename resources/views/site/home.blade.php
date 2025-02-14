@@ -25,37 +25,29 @@
         </div>
     </section>
 
-    <section id="popular-services" class="w-full py-20 px-10 bg-gray-100">
-        <div class="container">
-            <div class="text-6xl text-dark text-center font-semibold text-gray-900 mb-20">
-                Popular Services
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch w-full">
-                @php
-                    $services = [
-                        ['image' => '/images/house.png', 'title' => 'House Cleaning', 'description' => 'Professional home cleaning services'],
-                        ['image' => '/images/accountant.png', 'title' => 'Accountant Services', 'description' => 'Financial and accounting expertise'],
-                        ['image' => '/images/car.png', 'title' => 'Car Cleaning', 'description' => 'High-quality vehicle cleaning services'],
-                        ['image' => '/images/lawyer.png', 'title' => 'Lawyer Services', 'description' => 'Legal assistance and consulting']
-                    ];
-                @endphp
-
-                @foreach ($services as $service)
-                    <div class="flex flex-col h-full bg-white shadow-lg rounded-lg transition transform hover:scale-105">
-                        <div class="p-6 text-center flex-grow flex flex-col items-center">
-                            <div class="p-4 rounded-full inline-block mb-4">
-                                <img src="{{ $service['image'] }}" alt="{{ $service['title'] }}" class="w-24 h-24">
+    @if(isset($services) && count($services) > 0)
+        <section id="popular-services" class="w-full py-20 px-10 bg-gray-100">
+            <div class="container">
+                <div class="text-6xl text-dark text-center font-semibold text-gray-900 mb-20">
+                    Popular Services
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch w-full">
+                    @foreach ($services as $service)
+                        <div class="flex flex-col h-full bg-white shadow-lg rounded-lg transition transform hover:scale-105">
+                            <div class="p-6 text-center flex-grow flex flex-col items-center">
+                                <div class="p-4 rounded-full inline-block mb-4">
+                                    <img src="{{ $service['image'] }}" alt="{{ $service->description->title }}" class="w-24 h-24">
+                                </div>
+                                <div class="text-xl font-semibold text-gray-800">{{ $service->description->title }}</div>
+                                <p class="text-gray-600 mt-2">{{ $service->description->description }}</p>
                             </div>
-                            <div class="text-xl font-semibold text-gray-800">{{ $service['title'] }}</div>
-                            <p class="text-gray-600 mt-2">{{ $service['description'] }}</p>
+                            <a class="w-full text-center block p-6 text-white dark-btn uppercase hover:text-white" href="{{ route('service', ['slug' => $service->slug]) }}">More</a>
                         </div>
-                        <a class="w-full text-center block p-6 text-white dark-btn uppercase hover:text-white" href="#">More</a>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     <section id="popular-services" class="container py-14 px-10">
         <div class="text-6xl text-dark text-center font-semibold text-gray-900 mb-20">About</div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Services;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
@@ -10,7 +11,9 @@ class SiteController extends Controller
 {
     public function home()
     {
-	    return view('site.home');
+	    $services = Services::with('description')->where('status', true)->get();
+
+	    return view('site.home', compact('services'));
     }
 
 	public function about()
@@ -26,5 +29,15 @@ class SiteController extends Controller
 	public function privacy()
 	{
 		return view('site.privacy');
+	}
+
+	public function cookies()
+	{
+		return view('site.cookies');
+	}
+
+	public function termsOfUse()
+	{
+		return view('site.termsofuse');
 	}
 }
