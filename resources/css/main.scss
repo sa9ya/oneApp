@@ -5,7 +5,9 @@
 @layer base {
 
   h1 {
-    @apply text-5xl font-bold text-gray-900;
+    //@apply inline-block rounded-full py-8 px-16;
+    //@apply bg-[linear-gradient(270deg,rgba(124,73,242,0.467),rgb(125,73,242)_65%)];
+    @apply text-5xl font-bold leading-tight;
   }
 
   h2 {
@@ -37,52 +39,16 @@
     @apply my-2
   }
 
-  .bright-btn {
-    background-color: #eee;
+  .btn-main {
+    @apply bg-[linear-gradient(270deg,rgba(124,73,242,0.467),rgb(125,73,242)_65%)];
+    @apply text-4xl text-white py-6 px-12 rounded-full transition-all duration-[400ms];
   }
 
-  .bright-btn:hover {
-    background-color: #bbb;
-    @apply shadow-md;
+  .btn-main:hover {
+    @apply bg-[linear-gradient(270deg,rgb(242,73,124),rgb(242,125,73)_65%)] text-white;
   }
 
-  .dark-btn {
-    background-color: #84C5F6;
-    color: #0A3A67;
-  }
-
-  .dark-btn:hover {
-    background-color: #4297E1;
-  }
-
-  //
-  //colors: {
-  //  secondary: '#80afd6',
-  //  primary: '#84C5F6',
-  //  accent: '#343e41',
-  //  muted: '#0c1934',
-  //},
-  .hover-effect {
-    position: relative;
-  }
-
-  .hover-effect::before {
-    content: '';
-    width: 0%;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    transition: .4s;
-  }
-
-  .hover-effect:hover::before {
-    width: 100%;
-  }
-
-  table td,
-  table th {
-    @apply border font-semibold p-4 text-left;
+  .round-bottom {
+    @apply rounded-b-[4em]
   }
 }

@@ -1,11 +1,11 @@
-<nav class="hidden md:flex items-center space-x-6 uppercase">
+<nav class="gap-10 flex items-center space-x-6 text-xl">
     <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-white hover:text-gray-300 hover-effect">{{ __('menu.home') }}</a>
     <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="text-white hover:text-gray-300 hover-effect">{{ __('menu.about') }}</a>
     <a href="{{ LaravelLocalization::localizeUrl('/services') }}" class="text-white hover:text-gray-300 hover-effect">{{ __('menu.services') }}</a>
     <a href="{{ LaravelLocalization::localizeUrl('/contacts') }}" class="text-white hover:text-gray-300 hover-effect">{{ __('menu.contacts') }}</a>
 
     <div class="relative inline-block text-left">
-        <button id="language-button" class="flex items-center px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 focus:outline-none">
+        <button id="language-button" class="flex items-center px-4 py-2 text-white focus:outline-none">
                             <span class="uppercase">
                                 @php
                                     $currentLocale = LaravelLocalization::getCurrentLocale();
@@ -18,10 +18,10 @@
             </svg>
         </button>
 
-        <div id="language-menu" class="absolute mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg hidden">
+        <div id="language-menu" class="absolute z-50 mt-2 w-40 rounded-lg shadow-lg hidden bg-white">
             @foreach($locales as $localeCode => $properties)
                 @if($localeCode !== $currentLocale)
-                    <a href="{{ LaravelLocalization::getLocalizedURL($localeCode) }}" class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200">
+                    <a href="{{ LaravelLocalization::getLocalizedURL($localeCode) }}" class="rounded-lg block w-full text-left px-4 py-2 text-gray-800  hover:text-white hover:bg-[#0400f5]">
                         {{ $properties['native'] }}
                     </a>
                 @endif
